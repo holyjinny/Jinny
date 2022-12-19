@@ -1,38 +1,218 @@
-.App {
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap');
+
+/* COMMON */
+:root {
+  --HEADER-HEIGHT: 3rem;
+
+  /* COLORS */
+  --HUE: 0;
+  --SAT: 0%;
+  --TITLE-COLOR: hsl(var(--HUE), var(--SAT), 20%);
+  --TITLE-COLOR-DARK: hsl(var(--HUE), var(--SAT), 0%);
+  --TEXT-COLOR: hsl(var(--HUE), var(--SAT), 46%);
+  --BODY-COLOR: hsl(var(--HUE), var(--SAT), 95%);
+  --CONTAINER-COLOR: #fff;
+  --BLUE: rgb(47, 39, 204);
+  --CROWD-FLOWER: #D38AFF;
+  
+  /* FONTS */
+  --BODY-FONT: "Noto Sans KR", sans-serif;
+
+  /* .5rem = 8px | 1rem = 16px */
+  --BIG-FONT-SIZE: 3.5rem;
+  --H1-FONT-SIZE: 2.25rem;
+  --H2-FONT-SIZE: 1.5rem;
+  --H3-FONT-SIZE: 1.25rem;
+  --NORMAL-FONT-SIZE: 1rem;
+  --SMALL-FONT-SIZE: 0.875rem;
+  --SMALLER-FONT-SIZE: 0.813rem;
+  --TINY-FONT-SIZE: 0.625rem;
+
+  /* FONT WEIGHT */
+  --FONT-NORAML: 400;
+  --FONT-MEDIUM: 500;
+  --FONT-SEMI-BOLD: 600;
+
+  /* MARGIN BOTTOM */
+  --MB-0-25: 0.25rem;
+  --MB-0-5: 0.5rem;
+  --MB-0-75: 0.75rem;
+  --MB-1: 1rem;
+  --MB-1-5: 1.5rem;
+  --MB-2: 2rem;
+  --MB-2-5: 2.5rem;
+  --MB-3: 3rem;
+  --MB-4: 4rem;
+
+  /* Z-INDEX */
+  --Z-TOOLTIP: 10;
+  --Z-FIXED: 100;
+  --Z-MODAL: 1000;
+}
+
+/* BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+button,
+input,
+textarea {
+  font-family: var(--BODY-FONT);
+  font-size: var(--NORMAL-FONT-SIZE);
+}
+
+body {
+  background-color: var(--BODY-COLOR);
+  color: var(--TEXT-COLOR);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--TITLE-COLOR);
+  font-weight: var(--FONT-SEMI-BOLD);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* REUSABLE CLASSES */
+.section {
+  padding: 6rem 0 2rem;
+}
+
+.section__title {
+  font-size: var(--H1-FONT-SIZE);
+  color: var(--TITLE-COLOR);
+}
+
+.section__subtitle {
+  display: block;
+  font-size: var(--SMALL-FONT-SIZE);
+  margin-bottom: var(--MB-4);
+}
+
+.section__title,
+.section__subtitle {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* LAYOUT */
+.container {
+  max-width: 968px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.grid {
+  display: grid;
+  gap: 1.5rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+/* BUTTONS */
+.button {
+  display: inline-block;
+  background-color: var(--TITLE-COLOR);
+  color: var(--CONTAINER-COLOR);
+  padding: 1.25rem 2rem;
+  border-radius: 1rem;
+  font-weight: var(--FONT-MEDIUM);
+}
+
+.button:hover {
+  background-color: var(--TITLE-COLOR-DARK);
+}
+
+.button__icon {
+  margin-left: var(--MB-0-5);
+}
+
+.button__flex {
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* RESPONSIVE FONTS */
+@media screen and (max-width: 992px) {
+  :root {
+    --BIG-FONT-SIZE: 2.75rem;
+    --H1-FONT-SIZE: 1.5rem;
+    --H2-FONT-SIZE: 1.25rem;
+    --H3-FONT-SIZE: 1rem;
+    --NORMAL-FONT-SIZE: 0.938rem;
+    --SMALL-FONT-SIZE: 0.813rem;
+    --SMALLER-FONT-SIZE: 0.75rem;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+/* RESPONSIVE LARGE DEVICES */
+@media screen and (max-width: 992px) {
+  .container {
+    margin-left: var(--MB-1-5);
+    margin-right: var(--MB-1-5);
+  }
+
+  .button {
+    padding: 1rem 1.75rem;
+  }
+
+  .button__icon {
+    font-size: var(--H1-FONT-SIZE);
+  }
+}
+
+/* RESPONSIVE MEDIUM DEVICES */
+@media screen and (max-width: 768px) {
+  body {
+    margin: 0 0 var(--HEADER-HEIGHT) 0;
+  }
+  
+  .section {
+    padding: 2rem 0 4rem;
+  }
+
+  .section__subtitle {
+    margin-bottom: var(--MB-3);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  
+}
+
+/* RESPONSIVE SMALL DEVICES */
+@media screen and (max-width: 350px) {
+  :root {
+    --BIG-FONT-SIZE: 2.25rem;
+  }
+
+  .container {
+    margin-left: var(--MB-1);
+    margin-right: var(--MB-1);
   }
 }
