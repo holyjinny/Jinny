@@ -3,7 +3,7 @@ import Header from './components/header/Header';
 import Home from './components/home/Home';
 import About from './components/about/About';
 import Skills from './components/skills/Skills';
-import Services from './components/services/Services';
+import Directionality from './components/directionality/Directionality';
 import Qualification from './components/qualification/Qualification';
 import Portfolio from './components/portfolio/Portfolio';
 import Contact from './components/contact/Contact';
@@ -19,7 +19,7 @@ const App = () => {
         <Home />
         <About />
         <Skills />
-        <Services />
+        <Directionality />
         <Qualification />
         <Portfolio />
         <Contact />

@@ -1,6 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
+import Video2 from "../../assets/smart-app.mp4";
 
 const WorkItems = ({ item }) => {
+  const [toggleState, setToggleState] = useState(0);
+
+  const toggleTab = (index) => {
+    setToggleState(index);
+  };
+
   return (
     <div className="work__card" key={item.id}>
       <img src={item.image} alt={item.title} className="work__img" />
@@ -16,11 +23,66 @@ const WorkItems = ({ item }) => {
           </div>
         </a>
 
-        <div className="work__wrapper-icon code">
+        <div
+          className={
+            item.tooltip2 === "ERD"
+              ? "work__wrapper-icon erd"
+              : "work__wrapper-icon-hidden erd"
+          }
+        >
           <div className="tooltip">{item.tooltip2}</div>
-          <span>
-            <i className="uil uil-arrow" />
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://momentous-windscreen-cec.notion.site/Admin-Board-6ab226503ff34fb09b3ae4efc24a26c5"
+          >
+            <span>
+              <i className="uil uil-object-group" />
+            </span>
+          </a>
+        </div>
+
+        <div className="work__wrapper-icon code">
+          <div className="tooltip">{item.tooltip3}</div>
+          <span onClick={() => toggleTab(item.videoNum)}>
+            <i className="uil uil-video" />
           </span>
+
+          <div
+            className={
+              toggleState === 1 ? "video__modal show-modal" : "video__modal"
+            }
+          >
+            <div className="video__modal-content">
+              <i
+                className="uil uil-times video__modal-close"
+                onClick={() => toggleTab(0)}
+              />
+
+              <h3 className="video__modal-title">시연 영상</h3>
+              <p className="video__modal-description">반응형 웹페이지의 모습</p>
+              <video src={""} controls />
+            </div>
+          </div>
+
+          <div
+            className={
+              toggleState === 2 ? "video__modal show-modal" : "video__modal"
+            }
+          >
+            <div className="video__modal-content">
+              <i
+                className="uil uil-times video__modal-close"
+                onClick={() => toggleTab(0)}
+              />
+
+              <h3 className="video__modal-title">시연 영상</h3>
+              <p className="video__modal-description">
+                Firebase 실시간 데이터가 웹상에 잘 반영되는지 <br /> 테스트
+              </p>
+              <video src={Video2} controls />
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import AboutImage from "../../assets/ID_picture.png";
-import CV from "../../assets/Jinny-Cv.pdf";
+import CV from "../../assets/certificate.pdf";
 import Info from "./Info";
 import "./About.css";
 
@@ -18,11 +18,13 @@ const About = () => {
 
           <p className="about__description">
             현재 MERN을 기반으로 하여 프로젝트 등을 구현해보고 있으며, 코딩
-            테스트의 레벨을 올릴 계획입니다.
+            테스트의 레벨을 올릴 계획입니다. <br />
+            교육 과정 중 Firebase + Arduino + Flutter 를 이용한 어플을 통해
+            우수상을 받았습니다.
           </p>
 
           <a download={""} href={CV} className="button button__flex">
-            Download CV <i className="uil uil-file-export" />
+            증명서 <i className="uil uil-file-export" />
           </a>
         </div>
       </div>

@@ -42,6 +42,7 @@ const Qualification = () => {
         </div>
 
         <div className="qualification__sections">
+          {/* 학력 */}
           <div
             className={
               toggleState === 1
@@ -50,12 +51,13 @@ const Qualification = () => {
             }
           >
             <div className="qualification__data">
+              {/* 고등학교 */}
               <div>
-                <h3 className="qualification__title">디자인 자격</h3>
-                <span className="qualification__subtitle">어디서</span>
+                <h3 className="qualification__title">광덕고등학교</h3>
+                <span className="qualification__subtitle">문과</span>
 
                 <div className="qualification__calendar">
-                  <i className="uil uil-calendar-alt" /> ~ Present
+                  <i className="uil uil-calendar-alt" /> 2010. 03 ~ 2013. 02
                 </div>
               </div>
 
@@ -73,51 +75,23 @@ const Qualification = () => {
                 <span className="qualification__line"></span>
               </div>
 
+              {/* 대학교 */}
               <div>
-                <h3 className="qualification__title">DB 자격</h3>
-                <span className="qualification__subtitle">어디서</span>
+                <h3 className="qualification__title">
+                  한국호텔관광실용전문학교
+                </h3>
+                <span className="qualification__subtitle">
+                  국제호텔관광경영학
+                </span>
 
                 <div className="qualification__calendar">
-                  <i className="uil uil-calendar-alt" /> ~ Present
-                </div>
-              </div>
-            </div>
-
-            <div className="qualification__data">
-              <div>
-                <h3 className="qualification__title">웹 개발</h3>
-                <span className="qualification__subtitle">어디서</span>
-
-                <div className="qualification__calendar">
-                  <i className="uil uil-calendar-alt" /> ~ Present
-                </div>
-              </div>
-
-              <div>
-                <span className="qualification__rounder"></span>
-                <span className="qualification__line"></span>
-              </div>
-            </div>
-
-            <div className="qualification__data">
-              <div></div>
-
-              <div>
-                <span className="qualification__rounder"></span>
-                <span className="qualification__line"></span>
-              </div>
-
-              <div>
-                <h3 className="qualification__title">Back 자격</h3>
-                <span className="qualification__subtitle">어디서</span>
-
-                <div className="qualification__calendar">
-                  <i className="uil uil-calendar-alt" /> ~ Present
+                  <i className="uil uil-calendar-alt" /> 2013. 03 ~ 2018. 06
                 </div>
               </div>
             </div>
           </div>
 
+          {/* 교육 */}
           <div
             className={
               toggleState === 2
@@ -127,45 +101,13 @@ const Qualification = () => {
           >
             <div className="qualification__data">
               <div>
-                <h3 className="qualification__title">개발 경험</h3>
-                <span className="qualification__subtitle">어디서</span>
+                <h3 className="qualification__title">광주국제직업전문학교</h3>
+                <span className="qualification__subtitle">
+                  시스템 SW 엔지니어링 (스마트팩토리)
+                </span>
 
                 <div className="qualification__calendar">
-                  <i className="uil uil-calendar-alt" /> ~ Present
-                </div>
-              </div>
-
-              <div>
-                <span className="qualification__rounder"></span>
-                <span className="qualification__line"></span>
-              </div>
-            </div>
-
-            <div className="qualification__data">
-              <div></div>
-
-              <div>
-                <span className="qualification__rounder"></span>
-                <span className="qualification__line"></span>
-              </div>
-
-              <div>
-                <h3 className="qualification__title">Mongo</h3>
-                <span className="qualification__subtitle">어디서</span>
-
-                <div className="qualification__calendar">
-                  <i className="uil uil-calendar-alt" /> ~ Present
-                </div>
-              </div>
-            </div>
-
-            <div className="qualification__data">
-              <div>
-                <h3 className="qualification__title">웹 개발</h3>
-                <span className="qualification__subtitle">어디서</span>
-
-                <div className="qualification__calendar">
-                  <i className="uil uil-calendar-alt" /> ~ Present
+                  <i className="uil uil-calendar-alt" /> 2021. 07 ~ 2022. 05
                 </div>
               </div>
 
