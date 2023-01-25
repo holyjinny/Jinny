@@ -6,7 +6,7 @@ export const projectsData = [
     id: 1,
     image: Project1,
     title: "어드민 보드",
-    href: "https://github.com/holyjinny",
+    href: "https://github.com/holyjinny/Admin-board",
     tooltip1: "GitHub",
     tooltip2: "ERD",
     tooltip3: "영상",

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Video1 from "../../assets/admin-board.mov";
 import Video2 from "../../assets/smart-app.mp4";
 
 const WorkItems = ({ item }) => {
@@ -60,8 +61,10 @@ const WorkItems = ({ item }) => {
               />
 
               <h3 className="video__modal-title">시연 영상</h3>
-              <p className="video__modal-description">반응형 웹페이지의 모습</p>
-              <video src={""} controls />
+              <p className="video__modal-description">
+                따라해본 대쉬보드의 전반적인 UI
+              </p>
+              <video src={Video1} controls />
             </div>
           </div>
 
