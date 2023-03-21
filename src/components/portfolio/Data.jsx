@@ -1,16 +1,16 @@
-import Project1 from "../../assets/clone1.png";
+import Project1 from "../../assets/jwitter.png";
 import Project2 from "../../assets/flutter1.png";
 
 export const projectsData = [
   {
     id: 1,
     image: Project1,
-    title: "어드민 보드",
-    href: "https://github.com/holyjinny/Admin-board",
+    title: "Jwitter",
+    href: "https://github.com/holyjinny/Jwitter",
+    web: "https://jwitter-frontend.onrender.com",
     tooltip1: "GitHub",
-    tooltip2: "ERD",
-    tooltip3: "영상",
-    videoNum: 1,
+    tooltip2: "Jwitter",
+    viewNum: 1,
     category: "clone",
   },
   {
@@ -19,9 +19,8 @@ export const projectsData = [
     title: "Wep & App (우수상)",
     href: "https://github.com/holyjinny/Smart_App-Team",
     tooltip1: "GitHub",
-    tooltip2: "Server",
-    tooltip3: "영상",
-    videoNum: 2,
+    tooltip2: "영상",
+    viewNum: 2,
     category: "development",
   },
 ];

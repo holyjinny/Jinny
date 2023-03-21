@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 const Data = () => {
   return (
@@ -14,9 +13,9 @@ const Data = () => {
       <p className="home__description">
         현재 MERN을 기준으로 공부하고 있는 취준생입니다!
       </p>
-      <Link to={"/"} className="button button__flex">
+      <a href="#contact" className="button button__flex">
         연락하기 <i className="uil uil-message button__icon" />
-      </Link>
+      </a>
     </div>
   );
 };

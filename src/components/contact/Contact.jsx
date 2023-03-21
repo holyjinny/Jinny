@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./Contact.css";
 
 const Contact = () => {
@@ -80,10 +79,6 @@ const Contact = () => {
                 placeholder="내용을 입력해주세요."
               />
             </div>
-
-            <Link to={"/"} className="button button__flex">
-              연락하기 <i className="uil uil-message button__icon" />
-            </Link>
           </form>
         </div>
       </div>
